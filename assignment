@@ -1,0 +1,84 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[1]:
+
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate a sample dataset
+np.random.seed(42)
+data = {
+    'Value': np.random.normal(0, 1, 1000)  # Generating 1000 random data points from a normal distribution
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Line plot
+plt.figure(figsize=(10, 6))
+plt.plot(df['Value'])
+plt.title('Line Plot of Sample Data')
+plt.xlabel('Data Points')
+plt.ylabel('Value')
+plt.show()
+
+
+# In[2]:
+
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate a sample dataset
+np.random.seed(42)
+data = {
+    'Value': np.random.normal(0, 1, 1000)  # Generating 1000 random data points from a normal distribution
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Histogram
+plt.figure(figsize=(10, 6))
+plt.hist(df['Value'], bins=30, color='skyblue', edgecolor='black')
+plt.title('Histogram of Sample Data')
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.show()
+
+
+# In[3]:
+
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample data with realistic values
+data = {
+    'Math Scores': [85, 78, 90, 92, 88, 76, 80, 91, 84, 89],
+    'Science Scores': [82, 88, 79, 94, 85, 91, 76, 89, 92, 87],
+    'History Scores': [75, 80, 84, 72, 88, 78, 83, 79, 87, 76],
+}
+
+# Create a DataFrame
+df = pd.DataFrame(data)
+
+# Create a box plot
+plt.figure(figsize=(10, 6))
+plt.boxplot([df['Math Scores'], df['Science Scores'], df['History Scores']], labels=['Math', 'Science', 'History'])
+plt.title('Box Plot of Exam Scores by Subject')
+plt.xlabel('Subject')
+plt.ylabel('Scores')
+plt.show()
+
+
+# In[ ]:
+
+
+
+
+
